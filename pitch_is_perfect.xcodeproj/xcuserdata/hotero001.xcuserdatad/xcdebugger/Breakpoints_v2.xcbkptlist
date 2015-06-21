@@ -9,7 +9,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "pitch_is_perfect/ViewController.swift"
+            filePath = "pitch_is_perfect/RecordSoundsViewController.swift"
             timestampString = "456488125.838596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

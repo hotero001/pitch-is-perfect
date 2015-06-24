@@ -53,11 +53,22 @@
                                     <action selector="lowPitchAudio:" destination="3de-l7-Eo6" eventType="touchUpInside" id="dUK-9p-H4J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFI-YD-9Xo">
+                                <rect key="frame" x="459" y="328" width="100" height="100"/>
+                                <state key="normal" image="darthVader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="darthVaderAudio:" destination="3de-l7-Eo6" eventType="touchUpInside" id="v1c-PR-gIg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GQh-ye-TPk" firstAttribute="top" secondItem="5AQ-OY-Rsc" secondAttribute="bottom" constant="50" id="2sc-lm-ez3"/>
+                            <constraint firstItem="xFI-YD-9Xo" firstAttribute="top" secondItem="num-dn-f7I" secondAttribute="bottom" constant="100" id="6kr-eX-9jh"/>
                             <constraint firstItem="num-dn-f7I" firstAttribute="top" secondItem="Htq-DZ-irc" secondAttribute="bottom" constant="50" id="B4K-Jc-bgR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xFI-YD-9Xo" secondAttribute="trailing" constant="25" id="Gdg-Mn-2CB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="num-dn-f7I" secondAttribute="trailing" constant="25" id="Uqw-bA-jtC"/>
                             <constraint firstItem="brL-Q6-zeG" firstAttribute="leading" secondItem="b4S-VM-irU" secondAttribute="leadingMargin" constant="25" id="eEA-fX-AE6"/>
                             <constraint firstAttribute="centerX" secondItem="5AQ-OY-Rsc" secondAttribute="centerX" constant="-2" id="hI8-zd-pja"/>
@@ -149,6 +160,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="darthVader" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>

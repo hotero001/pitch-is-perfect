@@ -103,6 +103,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func darthVaderAudio(sender: UIButton) {
+        playAudioWithVariablePitch(-1000)
     }
 }
 

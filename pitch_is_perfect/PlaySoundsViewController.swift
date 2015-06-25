@@ -11,7 +11,6 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
-    //global variables is this first one supposed to be an optional? and :AVAudioPlayer()
     var audioPlayer = AVAudioPlayer()
     var receivedAudio:RecordedAudio!
     
@@ -20,14 +19,6 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //if var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
-        //    var filePathUrl = NSURL.fileURLWithPath(filePath)
-        //    audioPlayer = AVAudioPlayer(contentsOfURL: filePathUrl, error: nil)
-        //    audioPlayer.enableRate = true
-        //}else{
-        //    println("nothing here")
-        //}
-        // Do any additional setup after loading the view.
         
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
@@ -38,11 +29,9 @@ class PlaySoundsViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func slowAudio(sender: UIButton) {
-         //var audioFile = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("movie_quote", ofType: ".mp3"))
          audioPlayer.stop()
         
          audioEngine.stop()
@@ -70,21 +59,6 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func lowPitchAudio(sender: UIButton) {
-//        audioPlayer.stop()
-//        var pitchPlayer = AVAudioPlayerNode()
-//        var timePitch = AVAudioUnitTimePitch()
-//        timePitch.pitch = 500
-//        
-//        audioEngine.attachNode(pitchPlayer)
-//        audioEngine.attachNode(timePitch)
-//        
-//        audioEngine.connect(pitchPlayer, to: timePitch, format: myAudioFile.processingFormat)
-//        audioEngine.connect()
-//        
-//        
-//        //audioPlayer.pitch = 0.5
-//        audioPlayer.currentTime = 0.0
-//        audioPlayer.play()
         playAudioWithVariablePitch(1000)
     }
     

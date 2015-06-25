@@ -109,7 +109,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZf-k7-58K">
-                                <rect key="frame" x="277" y="455.5" width="50" height="50"/>
+                                <rect key="frame" x="277" y="455" width="50" height="50"/>
                                 <state key="normal" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -117,6 +117,12 @@
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="J55-P8-tzT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap microphone to record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4m-a6-MWm">
+                                <rect key="frame" x="203" y="385" width="198" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -126,6 +132,8 @@
                             <constraint firstItem="cZf-k7-58K" firstAttribute="top" secondItem="0H2-jd-8od" secondAttribute="bottom" constant="50" id="kgW-yS-Yua"/>
                             <constraint firstAttribute="centerY" secondItem="JXE-Ix-79s" secondAttribute="centerY" id="pR4-IT-nLQ"/>
                             <constraint firstItem="0H2-jd-8od" firstAttribute="top" secondItem="JXE-Ix-79s" secondAttribute="bottom" constant="35" id="uyO-4F-ejf"/>
+                            <constraint firstAttribute="centerX" secondItem="B4m-a6-MWm" secondAttribute="centerX" constant="-2" id="yH8-dn-Lm7"/>
+                            <constraint firstItem="B4m-a6-MWm" firstAttribute="top" secondItem="JXE-Ix-79s" secondAttribute="bottom" constant="35" id="ygg-TJ-qt8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RECORD" id="dCb-xq-Z6c"/>
@@ -133,6 +141,7 @@
                         <outlet property="recordButton" destination="JXE-Ix-79s" id="jBB-Dz-ndU"/>
                         <outlet property="recordingInProgress" destination="0H2-jd-8od" id="3go-uZ-4ut"/>
                         <outlet property="stopButton" destination="cZf-k7-58K" id="sQz-uI-IUk"/>
+                        <outlet property="tapToRecord" destination="B4m-a6-MWm" id="JMc-Uz-8JX"/>
                         <segue destination="3de-l7-Eo6" kind="show" identifier="stopRecording" id="kJW-m7-0n4"/>
                     </connections>
                 </viewController>

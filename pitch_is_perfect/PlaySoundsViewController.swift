@@ -44,6 +44,10 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func slowAudio(sender: UIButton) {
          //var audioFile = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("movie_quote", ofType: ".mp3"))
          audioPlayer.stop()
+        
+         audioEngine.stop()
+         audioEngine.reset()
+        
          audioPlayer.rate = 0.5
          audioPlayer.currentTime = 0.0
          audioPlayer.play()
@@ -51,6 +55,10 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func fastAudio(sender: UIButton) {
         audioPlayer.stop()
+        
+        audioEngine.stop()
+        audioEngine.reset()
+        
         audioPlayer.rate = 1.5
         audioPlayer.currentTime = 0.0
         audioPlayer.play()
@@ -58,6 +66,7 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
+        audioEngine.stop()
     }
     
     @IBAction func lowPitchAudio(sender: UIButton) {
